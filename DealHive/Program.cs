@@ -1,4 +1,10 @@
 
+using System.Data;
+using System.Data.Common;
+using DealHive.Extentions;
+using Hive.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace DealHive
 {
     public class Program
@@ -12,9 +18,12 @@ namespace DealHive
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            
+            builder.Services.UseProgramServices(builder);
 
             var app = builder.Build();
-
+            
+            
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -24,7 +33,6 @@ namespace DealHive
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
