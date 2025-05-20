@@ -21,7 +21,7 @@ namespace Hive.Infrastructure.Data
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<AppUser> Users { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }

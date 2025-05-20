@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Hive.Core.Entities
 {
-    public class User : IdentityUser
+    public class AppUser : IdentityUser
     {
         public string Name { get; set; } = null!;
         public IEnumerable<Item> Items { get; set; } = new List<Item>();

@@ -13,7 +13,7 @@ namespace Hive.Core.Entities
         public decimal TotalPrice { get; set; }
         public DateTime OrderDate { get; set; } = DateTime.UtcNow;
 
-        public User Buyer { get; set; } = null!;
+        public AppUser Buyer { get; set; } = null!;
 
         public IEnumerable<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
